@@ -3,6 +3,10 @@ const swiper1 = new Swiper('.swiper-main', {
   slidesPerView: 1,
   spaceBetween: 30,
   freeMode: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -10,6 +14,7 @@ const swiper1 = new Swiper('.swiper-main', {
   breakpoints: {
     768: {
       slidesPerView: 'auto',
+      pagination: false,
     },
   }
 });
