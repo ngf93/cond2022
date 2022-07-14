@@ -90,3 +90,20 @@ const swiper6 = new Swiper('.swiper-subnav', {
     },
   }
 });
+
+var swiper8 = new Swiper(".swiper-mini", {
+  direction: "vertical",
+  spaceBetween: 10,
+  slidesPerView: 3,
+  loop: false,
+  slideToClickedSlide: true,
+  watchSlidesProgress: true,
+});
+var swiper7 = new Swiper(".swiper-photo", {
+  loop: false,
+  spaceBetween: 10,
+  watchSlidesProgress: true,
+  thumbs: {
+    swiper: swiper8,
+  },
+});

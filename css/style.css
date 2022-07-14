@@ -547,6 +547,7 @@ h6 {
 .color-main {color: var(--color-main);}
 .accent {color: var(--text-accent);}
 
+.flex-1 {flex:1;}
 .bb-1 {border-bottom: 1px solid;}
 
 hr {
@@ -567,6 +568,7 @@ hr[size="1"]{height: 1px;}
     .mb-8 {margin-bottom: 5em;}
 }
 
+.bg-white {background-color: #fff;}
 .box {
     background: var(--second);
     border-radius: 2em;
@@ -955,6 +957,39 @@ main {
     #sec-3 .sm {font-size: .8em;}
 }
 
+/* product page */
+#product-page .box {box-shadow: unset;}
+#product-page .text p {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+}
+.swiper-mini, .swiper-photo{
+    position: relative;
+    overflow: hidden;
+}
+.swiper-mini {
+    height: 400px;
+    width: 120px;
+}
+.swiper-mini .swiper-slide {
+    width: 120px;
+    height: 120px;
+}
+.swiper-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 2em;
+}
+.swiper-mini .swiper-slide-thumb-active img {background-color: var(--second);}
+.swiper-photo {flex: 1;}
+.swiper-photo img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
 
 
 .offer {
