@@ -177,13 +177,20 @@ input::placeholder, textarea::placeholder {color: #CBCBCB; font-weight: 400;}
 input, textarea {
     border: none;
     background-color: #fff;
-    border-radius: 1em;
-    padding: .7em 1.5em;
+    border: 1px solid var(--light-gray);
+    border-radius: 2em;
+    padding: 1em 1.5em;
     width: 100%;
     line-height: normal;
     box-shadow: unset;
     box-sizing: border-box;
     display: block;
+    transition: var(--transition);
+}
+input:hover, textarea:hover,
+input:focus, textarea:focus,
+input:active, textarea:active {
+    border: 1px solid var(--color-main);
 }
 input[type="number"] {padding: .7em 0 .7em .5em;}
 
@@ -627,6 +634,9 @@ ol.breadcrumb {
     align-items: center;
     color: var(--light-gray);
 }
+.box .pagination ul a {
+    background: #fff;
+}
 .pagination ul a:hover, .pagination ul a:focus, .pagination ul a:active,
 .pagination ul a.active {color: #fff;}
 
@@ -948,6 +958,11 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .stars i {
     color: #FE9F77;
     font-size: 1.3em;
@@ -957,7 +972,9 @@ main {
     #sec-3 .sm {font-size: .8em;}
 }
 
+
 /* product page */
+#product-page {position: relative;}
 #product-page .box {box-shadow: unset;}
 #product-page .text p {
     font-size: 1.1em;
@@ -970,12 +987,13 @@ main {
     overflow: hidden;
 }
 .swiper-mini {
+    --size: 120px;
     height: 400px;
-    width: 120px;
+    width: var(--size);
 }
 .swiper-mini .swiper-slide {
-    width: 120px;
-    height: 120px;
+    width: var(--size);
+    height: var(--size);
 }
 .swiper-mini img {
     width: 100%;
@@ -987,8 +1005,81 @@ main {
 .swiper-photo {flex: 1;}
 .swiper-photo img {
     width: 100%;
-    height: 600px;
+    height: 560px;
     object-fit: contain;
+}
+.bying-info {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(45, 45, 45, 0.12);
+    border-radius: 2em;
+}
+ul[role="tablist"] .btn {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.specification {
+    columns: 2;
+    column-gap: 80px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.specification .line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--light-gray);
+    margin-bottom: 1.5em;
+    break-inside: avoid; 
+}
+.review {margin-bottom: 3em;}
+@media (max-width: 1499px){
+    .swiper-photo img {height: 560px;}
+}
+@media (max-width: 1399px){
+    .swiper-photo img {height: 520px;}
+}
+@media (max-width: 1199px){
+    .swiper-mini {--size: 100px;}
+    .swiper-photo img {height: 430px;}
+    .swiper-mini {height: 350px;}
+    ul[role="tablist"] .btn {font-size: 1.25em;}
+    .specification {column-gap: 50px;}
+}
+@media (max-width: 991px){
+    ul[role="tablist"] .btn {padding: 1em 2em;}
+    .bying-info {
+        position: fixed;
+        z-index: 100;
+        bottom: 1em;
+        left: 2em;
+        right: 2em;
+    }
+    .swiper-photo img {height: 590px;}
+    .specification {columns:1;}
+}
+@media (max-width: 767px){
+    ul[role="tablist"] .btn {padding: .75em 1.5em;}
+    .swiper-photo img {height: 410px;}
+    .bying-info {bottom: 7em;}
+}
+@media (max-width: 575px){
+    .swiper-mini {display: none;}
+    .swiper-photo img {height: 88vw;}
+    .bying-info {
+        bottom: 8em;
+        left: 1em;
+        right: 1em;
+    }
+    .bying-info .btn {
+        padding: 1em;
+        font-size: .9em;
+    }
+    .bying-info h3 {font-size: 16px;}
+    .bying-info del {font-size: 12px;}
+    ul[role="tablist"] .btn {
+        padding: .75em 1em;
+        font-size: 1em;
+    }
 }
 
 
@@ -1246,4 +1337,42 @@ footer ul a {
 }
 @media (max-width: 575px){
     .offcanvas {width: 100% !important;}
+}
+
+
+/* MODAL */
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 600px;
+    }
+}
+.modal-content {
+    padding: 2.5em;
+    position: relative;
+    border-radius: 2em;
+}
+@media (max-width: 575px){
+    .modal-content {padding: 1.5em;}
+}
+.btn-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: var(--second);
+    font-size: 1em;
+    padding: 0px;
+    color: var(--gray);
+    opacity: 1;
+    transition: var(--transition);
+}
+.btn-close:hover, .btn-close:focus, .btn-close:active {
+    background-color: var(--color-main);
+    color: #fff;
 }

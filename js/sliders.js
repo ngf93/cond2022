@@ -94,7 +94,8 @@ const swiper6 = new Swiper('.swiper-subnav', {
 var swiper8 = new Swiper(".swiper-mini", {
   direction: "vertical",
   spaceBetween: 10,
-  slidesPerView: 3,
+  slidesPerView: 'auto',
+  freemode: true,
   loop: false,
   slideToClickedSlide: true,
   watchSlidesProgress: true,
