@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="top">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+            <ul class="list-unstyled">
+                <li><a href="">О компании</a></li>
+                <li><a href="">Портфолио</a></li>
+                <li><a href="all-news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <a href="tel:88000000000" class="">
+                <i class="bi-telephone"></i>
+                <span class="ms-2 fw-6">8 800 000 00 00</span>
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="d-none d-md-block"><img src="imgs/logo.jpg" alt="Кондиционеры" class="logo"></a>
+            <div class="d-flex flex-grow-1 ms-md-3 ms-lg-4 ms-xxl-5">
+                <button type="button" class="d-none d-md-flex btn btn-1 gradient-effects px-3 fs-11 fw-7">
+                    <i class="bi bi-list fs-12"></i>
+                    <span class="ms-2">Каталог</span>
+                </button>
+                <form action="" class="flex-grow-1 ms-md-3 ms-xl-4">
+                    <input type="search" placeholder="Поиск">
+                    <button type="submit" class="main-text fs-15">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+            <button type="button" class="fs-11 fw-5 d-none d-md-flex flex-column align-items-center ms-4 ms-xxl-5">
+                <i class="bi bi-truck fs-15"></i>
+                <span class="d-none d-lg-block">Доставка</span>
+            </button>
+            <a href="services.html" class="fs-11 fw-5 d-none d-md-flex flex-column align-items-center ms-4 ms-xxl-5">
+                <i class="bi bi-tools fs-15"></i>
+                <span class="d-none d-lg-block">Услуги</span>
+            </a>
+            <a href="shopping-cart.html" class="fs-11 fw-5 d-none d-md-flex flex-column align-items-center ms-4 ms-xxl-5">
+                <i class="bi bi-bag fs-15"></i>
+                <span class="d-none d-lg-block">Корзина</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="container mb-8">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                  <li class="breadcrumb-item active">Корзина</li>
+                </ol>
+            </nav>
+
+            <h1>Корзина</h1>
+
+            <form class="row">
+                <div class="col-xl-8">
+                    <div class="box bg-white p-3 p-sm-4">
+                        <h3 class="text-start">Товары в заказе</h3>
+                        <div class="cart-item">
+                            <a href="product.html"><img src="imgs/image7.png" alt="Сплит-система HI HAC-09F1A"></a>
+                            <div class="info">
+                                <div>
+                                    <h6>Сплит-система HI HAC-09F1A</h6>
+                                    <div class="d-flex align-items-baseline mb-3">
+                                        <h4 class="fw-7 mb-0">13 999 ₽</h4>
+                                        <del class="light-gray fs-12 fw-7 ms-2 ms-sm-3">16 999 ₽</del>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <button type="button">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="number" placeholder="0">
+                                    <button type="button">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="fs-20 light-gray ms-2 ms-sm-4">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item">
+                            <a href="product.html"><img src="imgs/image7.png" alt="Сплит-система HI HAC-09F1A"></a>
+                            <div class="info">
+                                <div>
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </h6>
+                                    <div class="d-flex align-items-baseline mb-3">
+                                        <h4 class="fw-7 mb-0">13 999 ₽</h4>
+                                        <del class="light-gray fs-12 fw-7 ms-2 ms-sm-3">16 999 ₽</del>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <button type="button">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="number" placeholder="0">
+                                    <button type="button">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="fs-20 light-gray ms-2 ms-sm-4">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item">
+                            <a href="product.html"><img src="imgs/image7.png" alt="Сплит-система HI HAC-09F1A"></a>
+                            <div class="info">
+                                <div>
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </h6>
+                                    <div class="d-flex align-items-baseline mb-3">
+                                        <h4 class="fw-7 mb-0">13 999 ₽</h4>
+                                        <del class="light-gray fs-12 fw-7 ms-2 ms-sm-3">16 999 ₽</del>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <button type="button">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="number" placeholder="0">
+                                    <button type="button">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="fs-20 light-gray ms-2 ms-sm-4">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item">
+                            <a href="product.html"><img src="imgs/image7.png" alt="Сплит-система HI HAC-09F1A"></a>
+                            <div class="info">
+                                <div>
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </h6>
+                                    <div class="d-flex align-items-baseline mb-3">
+                                        <h4 class="fw-7 mb-0">13 999 ₽</h4>
+                                        <del class="light-gray fs-12 fw-7 ms-2 ms-sm-3">16 999 ₽</del>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <button type="button">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="number" placeholder="0">
+                                    <button type="button">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="fs-20 light-gray ms-2 ms-sm-4">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item">
+                            <a href="product.html"><img src="imgs/image7.png" alt="Сплит-система HI HAC-09F1A"></a>
+                            <div class="info">
+                                <div>
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </h6>
+                                    <div class="d-flex align-items-baseline mb-3">
+                                        <h4 class="fw-7 mb-0">13 999 ₽</h4>
+                                        <del class="light-gray fs-12 fw-7 ms-2 ms-sm-3">16 999 ₽</del>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <button type="button">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="number" placeholder="0">
+                                    <button type="button">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="fs-20 light-gray ms-2 ms-sm-4">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="box p-3 p-sm-4 mt-4 mt-xl-0 mb-4 d-flex justify-content-between d-xl-block">
+                        <h3 class="d-none d-sm-block text-start mb-0 mb-xl-4">Ваш заказ</h3>
+                        <div class="fs-15 fw-6 gray">Сумма заказа: <span class="fs-11 fw-7 black ms-2">69 995 ₽</span></div>
+                    </div>
+                    <div class="box bg-white p-3 p-sm-4">
+                        <h3 class="text-start">Получатель</h3>
+                        <input type="text" class="mb-3" placeholder="Ваше Имя*" required>
+                        <input type="tel" class="mb-3" placeholder="Номер телефона*" required>
+                        <button type="submit" class="btn btn-1 gradient-effects w-100">
+                            <span>Оформить заказ</span>
+                        </button>
+                        <div class="fs-08 text-center mt-3">Нажимая на кнопку «Оформить заказ», я соглашаюсь на обработку персональных данных в соответсвии с <span class="color-main bb-1"><a href="#" >Условиями пользования сайта</a></span></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-md-5">
+        <div class="container d-none d-md-block">
+            <div class="row row-cols-4">
+                <div>
+                    <h4>О нас:</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="all-news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Мы предлагаем:</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="category.html">Товары</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Документы:</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Условия пользования сайта</a></li>
+                        <li><a href="">Публичная оферта</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>О нас:</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="d-flex">
+                <img src="imgs/icons/icon.png" alt="">
+                <img src="imgs/icons/icon.png" alt="" class="ms-4">
+                <img src="imgs/icons/icon.png" alt="" class="ms-4">
+                <img src="imgs/icons/icon.png" alt="" class="ms-4">
+            </div>
+            <div class="fs-11 mt-4">2022 @ Текст</div>
+        </div>
+        <div class="container d-md-none">
+            <nav>
+                <ul class="list-unstyled w-100 d-flex align-items-center justify-content-around">
+                    <li>
+                        <a href="tel:89000000000"><img src="imgs/icons/phone.svg" alt="Звонок"></a>
+                    </li>
+                    <li>
+                        <a href="category.html"><img src="imgs/icons/categories.svg" alt="Категории"></a>
+                    </li>
+                    <li>
+                        <a href="shopping-cart.html" class="cart btn btn-1 gradient-effects"><img src="imgs/icons/cart.svg" alt="Корзина"></a>
+                    </li>
+                    <li>
+                        <a href="services.html"><img src="imgs/icons/services.svg" alt="Услуги"></a>
+                    </li>
+                    <li>
+                        <button type="button"><img src="imgs/icons/menu.svg" alt="Меню"></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
