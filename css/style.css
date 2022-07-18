@@ -1066,6 +1066,29 @@ ul[role="tablist"] .btn {
     break-inside: avoid; 
 }
 .review {margin-bottom: 3em;}
+.leave-rating {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 3em;
+}
+.leave-rating input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+.leave-rating label {
+    color: var(--light-gray);
+    transition: var(--transition);
+    margin-right: .35em;
+}
+.leave-rating label:hover, .leave-rating label:hover ~ label, 
+.leave-rating input:checked ~ label {
+    color: #FE9F77;
+}
 @media (max-width: 1499px){
     .swiper-photo img {height: 560px;}
 }
