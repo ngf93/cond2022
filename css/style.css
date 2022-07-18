@@ -1356,6 +1356,13 @@ article.full-news p {
 }
 
 
+.img-pf {
+    width: 100%;
+    height: var(--height-2);
+    object-fit: cover;
+}
+
+
 .social {
     display: flex;
     align-items: center;
