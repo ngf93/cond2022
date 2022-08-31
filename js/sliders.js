@@ -108,3 +108,27 @@ var swiper7 = new Swiper(".swiper-photo", {
     swiper: swiper8,
   },
 });
+
+const swiper9 = new Swiper('.swiper-6', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 24,
+    },
+    992: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    },
+  }
+});
