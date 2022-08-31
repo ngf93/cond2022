@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кондиционеры</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
@@ -30,8 +32,9 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a href="index.html" class="d-none d-md-block"><img src="imgs/logo.jpg" alt="Кондиционеры" class="logo"></a>
             <div class="d-flex flex-grow-1 ms-md-3 ms-lg-4 ms-xxl-5">
-                <button type="button" class="d-none d-md-flex btn btn-1 gradient-effects px-3 fs-11 fw-7">
-                    <i class="bi bi-list fs-12"></i>
+                <button type="button" id="catalogBtn" data-flag="closed" onclick="toggleCatalog(this)" class="d-none d-md-flex btn btn-1 gradient-effects fs-11 fw-7">
+                    <img src="imgs/icons/burger.svg" alt="burger" class="icon burger">
+                    <img src="imgs/icons/close.svg" alt="close" class="icon close">
                     <span class="ms-2">Каталог</span>
                 </button>
                 <form action="" class="flex-grow-1 ms-md-3 ms-xl-4">
@@ -54,7 +57,119 @@
                 <span class="d-none d-lg-block">Корзина</span>
             </a>
         </div>
+        <div id="catalog-menu">
+            <div class="menu">
+                <nav>
+                    <ul id="submenu-list">
+                        <li><a href="/" data-target="submenu-1">Кондиционеры</a></li>
+                        <li><a href="/" data-target="submenu-2">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                        <li><a href="">Кондиционеры</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="submenu">
+                <nav class="nav-submenu" id="submenu-1">
+                    <ul class="list-unstyled row row-cols-2 gx-4 gy-5">
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav-submenu" id="submenu-2">
+                    <ul class="list-unstyled row row-cols-2 gx-4 gy-5">
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                        <li>
+                            <div class="fs-11 fw-7 mb-3"><a href="/">Lorem ipsum dolor met amet</a></div>
+                            <ul class="list-unstyled fs-11 fw-5">
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                                <li class="mb-3"><a href="/">Кондиционеры</a></li>
+                            </ul>
+                            <a href="/" class="d-block light-gray"><span class="bb-1">Смотреть все</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <figure>
+                    <img src="imgs/offer.png" alt="СКИДКА ДО 60%">
+                    <figcaption>
+                        <h3>СКИДКА ДО 60%</h3>
+                        <h5 class="fw-5 text-center">При установке кондиционера под ключ</h5>
+                        <button type="button" class="btn btn-3 fs-11 gradient-effects mx-auto"><span>ПОДРОБНЕЕ</span></button>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
     </header>
+    <div id="shadow"></div>
 
     <main>
         <section class="container position-relative mb-8">
@@ -484,16 +599,109 @@
                         <a href="services.html"><img src="imgs/icons/services.svg" alt="Услуги"></a>
                     </li>
                     <li>
-                        <button type="button"><img src="imgs/icons/menu.svg" alt="Меню"></button>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><img src="imgs/icons/menu.svg" alt="Меню"></button>
                     </li>
                 </ul>
             </nav>
         </div>
     </footer>
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="mb-0">Навигация по сайту</h5>
+            <button type="button" data-bs-dismiss="offcanvas" class=" pe-3">
+                <i class="bi bi-x-lg fs-15"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="tel:88000000000" class="d-block fs-12 mb-4">
+                <i class="bi-telephone"></i>
+                <span class="ms-2 fw-6">8 800 000 00 00</span>
+            </a>
+            <nav class="fs-12">
+                <ul class="list-unstyled">
+                    <li class="mb-3"><a href="index.html">Главная</a></li>
+                    <li class="mb-3"><a href="about.html">О компании</a></li>
+                    <li class="mb-3"><a href="stock.html">Акции</a></li>
+                    <li class="mb-3"><a href="portfolio.html">Портфолио</a></li>
+                    <li class="mb-3"><a href="all-news.html">Новости</a></li>
+                    <li class="mb-3"><a href="">Доставка</a></li>
+                    <li class="mb-3"><a href="contacts.html">Контакты</a></li>
+                    <li class="mb-3"><a href="">Условия пользования сайта</a></li>
+                    <li class="mb-3"><a href="">Публичная оферта</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="addReview" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg fs-12"></i>
+                </button>
+                <h3>Оставить отзыв</h3>
+                <form action="">
+                    <div class="gray mb-2">Общая оценка:</div>
+                    <div class="leave-rating mb-4">
+                        <input type="radio" name="rating" id="rating-5" value="5" hidden>
+                        <label for="rating-5">
+                            <i class="bi bi-star-fill"></i>
+                        </label>
+                        <input type="radio" name="rating" id="rating-4" value="4" hidden>
+                        <label for="rating-4">
+                            <i class="bi bi-star-fill"></i>
+                        </label>
+                        <input type="radio" name="rating" id="rating-3" value="3" hidden>
+                        <label for="rating-3">
+                            <i class="bi bi-star-fill"></i>
+                        </label>
+                        <input type="radio" name="rating" id="rating-2" value="2" hidden>
+                        <label for="rating-2">
+                            <i class="bi bi-star-fill"></i>
+                        </label>
+                        <input type="radio" name="rating" id="rating-1" value="1" hidden>
+                        <label for="rating-1">
+                            <i class="bi bi-star-fill"></i>
+                        </label>
+                    </div>
+                    <input type="text" class="mb-3" placeholder="Достоинства (необязательно)">
+                    <input type="text" class="mb-3" placeholder="Недостатки (необязательно)">
+                    <input type="text" class="mb-3" placeholder="Комментарий" required>
+                    <input type="email" class="mb-3" placeholder="Адрес электронной почты" required>
+                    <input type="text" class="mb-3" placeholder="Ваше Имя" required>
+                    <button type="submit" class="btn btn-1 gradient-effects w-100">
+                        <span>Оставить отзыв</span>
+                    </button>
+                    <div class="fs-08 text-center mt-3">Нажимая на кнопку «Оформить заказ», я соглашаюсь на обработку персональных данных в соответсвии с <span class="color-main bb-1"><a href="#" >Условиями пользования сайта</a></span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="buyNow" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg fs-12"></i>
+                </button>
+                <h3>Купить в один клик</h3>
+                <form action="">
+                    <input type="text" class="mb-3" placeholder="Ваше Имя*" required>
+                    <input type="tel" class="mb-3" placeholder="Номер телефона *" required>
+                    <button type="submit" class="btn btn-1 gradient-effects w-100">
+                        <span>Оставить отзыв</span>
+                    </button>
+                    <div class="fs-08 text-center mt-3">Нажимая на кнопку «Оформить заказ», я соглашаюсь на обработку персональных данных в соответсвии с <span class="color-main bb-1"><a href="#" >Условиями пользования сайта</a></span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

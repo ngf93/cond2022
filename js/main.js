@@ -1,3 +1,65 @@
+function openSubmenu(id){
+  if(id){
+    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).animate({
+      "opacity": "1",
+    }, {
+      duration: 200,
+      fill: "forwards",
+    });
+  }
+}
+function closeSubmenu(id){
+  if(id){
+    document.getElementById(id).animate({
+      "opacity": "0"
+    }, {
+      duration: 200,
+      fill: "forwards",
+    });
+    document.getElementById(id).style.display = 'none';
+  }
+}
+let arrLinks = Array.from(document.querySelectorAll('#submenu-list a'));
+arrLinks.forEach(function(item, i, arr) {
+  item.addEventListener('mouseenter', function(e) {
+    if (item.hasAttribute('data-target')) {
+      arr.forEach(obj => {
+        obj.classList.remove('active')
+        closeSubmenu(obj.dataset.target)
+      })
+      item.classList.add('active')
+      openSubmenu(item.dataset.target)
+    } else {return}
+  });
+});
+
+function toggleCatalog(btn){
+  if(btn.dataset.flag==='closed'){
+    document.getElementById('shadow').style.display='block'
+    document.getElementById('catalog-menu').style.display='flex'
+    document.getElementById('catalog-menu').animate({
+      "opacity": "1",
+    }, {
+      duration: 200,
+      fill: "forwards",
+    })
+    btn.dataset.flag='opened'
+
+    arrLinks.forEach(obj => {
+      obj.classList.remove('active')
+      closeSubmenu(obj.dataset.target)
+    })
+    arrLinks[0].classList.add('active')
+    openSubmenu(arrLinks[0].dataset.target)
+  } else {
+    document.getElementById('shadow').style.display='none'
+    document.getElementById('catalog-menu').style.display='none'
+    btn.dataset.flag='closed'
+  }
+}
+
+
 /*************** 
 CUSTOM SELECT
 ****************/
