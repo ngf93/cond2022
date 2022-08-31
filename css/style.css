@@ -836,6 +836,18 @@ header form input {border: none;}
     flex: 1;
     padding: 0 3em;
 }
+#catalog-menu .submenu nav .list-products {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+#catalog-menu .submenu nav .list-products li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1em;
+}
 #catalog-menu .submenu figure {
     width: 33%;
     height: 40vw;
@@ -1622,7 +1634,7 @@ footer ul a {
         bottom: 0px;
         left: 0px;
         width: 100%;
-        z-index: 100;
+        z-index: 1100;
         font-size: 12px;
     }
     footer nav {
@@ -1642,6 +1654,13 @@ footer ul a {
 
 
 /* OFFCANVAS */
+.offcanvas-bottom {
+    border-radius: 2em 2em 0 0;
+    height: fit-content !important;
+}
+.offcanvas-bottom .offcanvas-body {
+    padding: 2em 3em 7em;
+}
 .offcanvas-header {
     background: var(--main);
     color: #fff;
