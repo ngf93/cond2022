@@ -722,7 +722,7 @@ ol.breadcrumb {
 separate blocks
 ***************/
 nav.top {
-    background: var(--main);
+    background: var(--text-accent);
     color: #fff;
     height: 3em;
     font-size: .9em;
@@ -759,7 +759,7 @@ header form {
     align-items: center;
     padding: .75em;
 }
-header form input {border: none;}
+header form input, header form input:hover, header form input:focus, header form input:active {border: none;}
 
 #catalogBtn {
     position: relative;
