@@ -65,7 +65,9 @@ document.addEventListener('click', function(e) {
   const currentCatalog = target == catalogMenu || catalogMenu.contains(target);
   const currentBtn = target == btn || btn.contains(target);
   if (!currentCatalog && !currentBtn ) {
-    toggleCatalog(btn)
+    document.getElementById('shadow').style.display='none'
+    document.getElementById('catalog-menu').style.display='none'
+    btn.dataset.flag='closed'
   }
 });
 
