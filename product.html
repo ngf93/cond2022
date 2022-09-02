@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сплит-система HI HAC-09F1A</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Кондиционеры</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
@@ -820,7 +822,7 @@
                         <a href="contacts.html"><img src="imgs/icons/phone.svg" alt="Контакты"></a>
                     </li>
                     <li>
-                        <a href="category.html"><img src="imgs/icons/categories.svg" alt="Категории"></a>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileCatalog"><img src="imgs/icons/categories.svg" alt="Категории"></button>
                     </li>
                     <li>
                         <a href="shopping-cart.html" class="cart btn btn-1 gradient-effects"><img src="imgs/icons/cart.svg" alt="Корзина"></a>
@@ -829,14 +831,313 @@
                         <a href="services.html"><img src="imgs/icons/services.svg" alt="Услуги"></a>
                     </li>
                     <li>
-                        <button type="button"><img src="imgs/icons/menu.svg" alt="Меню"></button>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><img src="imgs/icons/menu.svg" alt="Меню"></button>
                     </li>
                 </ul>
             </nav>
         </div>
     </footer>
 
-    <!-- Modals -->
+    <!-- Modals & Offcanvas menus -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="mb-0">Навигация по сайту</h5>
+            <button type="button" data-bs-dismiss="offcanvas" class=" pe-3">
+                <i class="bi bi-x-lg fs-15"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="tel:88000000000" class="d-block fs-12 mb-4">
+                <i class="bi-telephone"></i>
+                <span class="ms-2 fw-6">8 800 000 00 00</span>
+            </a>
+            <nav class="fs-12">
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="stock.html">Акции</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="all-news.html">Новости</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="">Условия пользования сайта</a></li>
+                    <li><a href="">Публичная оферта</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="mobileCatalog">
+        <button type="button" data-bs-dismiss="offcanvas" class="btn-close">
+            <i class="bi bi-x-lg fs-12"></i>
+        </button>
+        <div class="offcanvas-body">
+            <nav>
+                <ul class="list-unstyled fs-14 fw-5 text-center">
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                    <li class="mb-3"><a href="category.html">Кондиционеры</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <form class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-filter">
+        <div class="offcanvas-header">
+            <button type="button" data-bs-dismiss="offcanvas" class="d-flex align-items-center pe-3">
+                <i class="bi bi-chevron-left fs-15 white"></i>
+            </button>
+            <h5 class="mb-0">Фильтры</h5>
+            <button type="reset">Очистить</button>
+        </div>
+        <div class="offcanvas-body">
+            <button class="fs-11 fw-7 gray mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#availability" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Наличие в магазине</span>
+            </button>
+            <div class="collapse" id="availability">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Наличие в магазине</span>
+                            <input type="checkbox" name="availability" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Под заказ: сегодня</span>
+                            <input type="checkbox" name="availability" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Под заказ: завтра</span>
+                            <input type="checkbox" name="availability" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-smmt-3">
+                        <label>
+                            <span class="flex-grow-1">Под заказ: позже</span>
+                            <input type="checkbox" name="availability" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Отсутсвующие в продаже</span>
+                            <input type="checkbox" name="availability" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#price" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Цена</span>
+            </button>
+            <div class="collapse" id="price">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-3 d-flex">
+                        <input type="number" placeholder="от" class="me-3">
+                        <input type="number" placeholder="до">
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <div class="flex-grow-1">
+                                Менее 15 000 ₽
+                                <span class="light-gray ms-2">(1)</span>
+                            </div>
+                            <input type="checkbox" name="price" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <div class="flex-grow-1">
+                                15 001 - 25 000 ₽
+                                <span class="light-gray ms-2">(1)</span>
+                            </div>
+                            <input type="checkbox" name="price" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <div class="flex-grow-1">
+                                25 001 - 35 000 ₽
+                                <span class="light-gray ms-2">(1)</span>
+                            </div>
+                            <input type="checkbox" name="price" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <div class="flex-grow-1">
+                                45 000 ₽ и более
+                                <span class="light-gray ms-2">(1)</span>
+                            </div>
+                            <input type="checkbox" name="price" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+            
+            <div class="d-flex align-items-center justify-content-between">
+                <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#brand" aria-expanded="false">
+                    <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                    <span>Производитель</span>
+                </button>
+                <button type="button" class="color-main fw-6 fs-12">Все</button>
+            </div>
+            <div class="collapse" id="brand">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Aeronik</span>
+                            <input type="checkbox" name="brand" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">AUX</span>
+                            <input type="checkbox" name="brand" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Axioma</span>
+                            <input type="checkbox" name="brand" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Ballu</span>
+                            <input type="checkbox" name="brand" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Bosch</span>
+                            <input type="checkbox" name="brand" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#type" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Тип</span>
+            </button>
+            <div class="collapse" id="type">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Тип 1</span>
+                            <input type="checkbox" name="type" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Тип 2</span>
+                            <input type="checkbox" name="type" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#mode" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Основные режимы</span>
+            </button>
+            <div class="collapse" id="mode">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">режим 1</span>
+                            <input type="checkbox" name="mode" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">режим 2</span>
+                            <input type="checkbox" name="mode" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#inventor" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Инвентор</span>
+            </button>
+            <div class="collapse" id="inventor">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Инвентор 1</span>
+                            <input type="checkbox" name="inventor" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Инвентор 2</span>
+                            <input type="checkbox" name="inventor" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#color" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Цвет</span>
+            </button>
+            <div class="collapse" id="color">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Цвет 1</span>
+                            <input type="checkbox" name="color" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Цвет 2</span>
+                            <input type="checkbox" name="color" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr size="1" class="my-3 my-sm-4">
+
+            <button class="fs-11 fw-7 gray" type="button" data-bs-toggle="collapse" data-bs-target="#cooling" aria-expanded="false">
+                <img src="imgs/icons/chevron-down.svg" alt="chevron" class="chevron">
+                <span>Охлаждение</span>
+            </button>
+            <div class="collapse" id="cooling">
+                <ul class="list-unstyled fw-5 gray">
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Охлаждение 1</span>
+                            <input type="checkbox" name="cooling" class="input-switch">
+                        </label>
+                    </li>
+                    <li class="mt-2 mt-sm-3">
+                        <label>
+                            <span class="flex-grow-1">Охлаждение 2</span>
+                            <input type="checkbox" name="cooling" class="input-switch">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-1 gradient-effects fs-11 fw-6 w-100 mt-4">
+                <span>Показать</span>
+            </button>
+        </div>
+    </form>
     <div class="modal fade" id="addReview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -903,6 +1204,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        swiper5.slideTo(4, false, false);
+    </script>
 </body>
 </html>
