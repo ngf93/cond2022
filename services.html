@@ -83,6 +83,218 @@
                 </li>
             </ul>
         </section>
+
+        <section class="container mb-8">
+            <h2 class="text-center">Вызов мастера</h2>
+            <form id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <fieldset class="carousel-item active">
+                        <div class="main">
+                            <legend>Выберите, куда вам нужен кондиционер:</legend>
+                            <ul class="list-unstyled row row-cols-2 row-cols-md-3 gx-2 gy-3 g-sm-4 g-xl-5">
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="place" value="Квартира" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img1.png" alt="Квартира">
+                                        <div class="title mt-2 mt-md-4">Квартира</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="place" value="Дом" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img2.png" alt="Дом">
+                                        <div class="title mt-2 mt-md-4">Дом</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="place" value="Офис" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img3.png" alt="Офис">
+                                        <div class="title mt-2 mt-md-4">Офис</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <div class="fs-12 fw-5">Шаг 1 из 4</div>
+                                <div class="indicators">
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" disabled class="prev" data-bs-target="#quiz-slider" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <button class="next verifiable-btn btn btn-1 gradient-effects" type="button" disabled data-bs-target="#quiz-slider" data-bs-slide="next">
+                                    <span class="white me-2">Далее</span>
+                                    <i class="white bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="carousel-item">
+                        <div class="main">
+                            <legend>Выберите площадь комнаты:</legend>
+                            <ul class="list-unstyled row row-cols-2 row-cols-md-3 gx-2 gy-3 g-sm-4 g-xl-5">
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 20 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 20 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 30 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 30 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 40 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 40 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 50 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 50 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 60 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 60 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 70 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 70 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 80 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 80 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="До 100 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">До 100 кв.м.</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-btn w-100">
+                                        <input type="radio" name="area" value="Более 100 кв.м." required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <div class="title box p-3 w-100">Более 100 кв.м.</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <div class="fs-12 fw-5">Шаг 2 из 4</div>
+                                <div class="indicators">
+                                    <span></span>
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="prev" data-bs-target="#quiz-slider" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <button class="next verifiable-btn btn btn-1 gradient-effects" type="button" disabled data-bs-target="#quiz-slider" data-bs-slide="next">
+                                    <span class="white me-2">Далее</span>
+                                    <i class="white bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="carousel-item">
+                        <div class="main">
+                            <legend>Какой тип кондиционера Вы хотите установить:</legend>
+                            <ul class="list-unstyled row row-cols-2 row-cols-md-3 gx-2 gy-3 g-sm-4 g-xl-5">
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="air-conditioner" value="Настенная сплит-система" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img4.png" alt="Настенная сплит-система" class="scale-d">
+                                        <div class="title mt-2 mt-md-4">Настенная сплит-система</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="air-conditioner" value="Мультисплит система" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img5.png" alt="Мультисплит система" class="scale-d">
+                                        <div class="title mt-2 mt-md-4">Мультисплит система</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="input-img">
+                                        <input type="radio" name="air-conditioner" value="Кассетный" required oninput="verifyInput(this.closest('fieldset'))" hidden>
+                                        <img src="imgs/quiz/img6.png" alt="Кассетный" class="scale-d">
+                                        <div class="title mt-2 mt-md-4">Кассетный</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <div class="fs-12 fw-5">Шаг 3 из 4</div>
+                                <div class="indicators">
+                                    <span></span>
+                                    <span></span>
+                                    <span class="active"></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="prev" data-bs-target="#quiz-slider" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <button class="next verifiable-btn btn btn-1 gradient-effects" type="button" disabled data-bs-target="#quiz-slider" data-bs-slide="next">
+                                    <span class="white me-2">Далее</span>
+                                    <i class="white bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="carousel-item">
+                        <div class="main">
+                            <legend>Введите свои контактные данные:</legend>
+                            <input type="text" placeholder="Ваше имя" class="fs-15 mb-2 mb-sm-4" required oninput="verifyInput(this.closest('fieldset'))">
+                            <input type="tel" placeholder="Номер телефона" class="fs-15 mb-2 mb-sm-4" required oninput="verifyInput(this.closest('fieldset'))">
+                            <textarea class="fs-15" rows="6" placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <div class="fs-12 fw-5">Шаг 4 из 4</div>
+                                <div class="indicators">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span class="active"></span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="prev" data-bs-target="#quiz-slider" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <button class="next verifiable-btn btn btn-1 gradient-effects" type="submit" disabled>
+                                    <span class="white me-2">Отправить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer class="py-md-5">
