@@ -58,6 +58,16 @@ function toggleCatalog(btn){
     btn.dataset.flag='closed'
   }
 }
+document.addEventListener('click', function(e) {
+  const catalogMenu = document.getElementById('catalog-menu')
+  const btn = document.getElementById('catalogBtn')
+  const target = e.target
+  const currentCatalog = target == catalogMenu || catalogMenu.contains(target);
+  const currentBtn = target == btn || btn.contains(target);
+  if (!currentCatalog && !currentBtn ) {
+    toggleCatalog(btn)
+  }
+});
 
 
 const cart = document.getElementById('cart-preview');
