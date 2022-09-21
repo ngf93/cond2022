@@ -1224,7 +1224,11 @@ main {
     margin-bottom: 1.5em;
     line-height: 1.5em;
 }
-.swiper-mini, .swiper-photo{
+.swiper-mini{
+    position: unset;
+    overflow: hidden;
+}
+.swiper-photo{
     position: relative;
     overflow: hidden;
 }
@@ -1232,6 +1236,11 @@ main {
     --size: 120px;
     height: 400px;
     width: var(--size);
+}
+.swiper-mini .swiper-button-next {
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%) translateY(0px);
 }
 .swiper-mini .swiper-slide {
     width: var(--size);

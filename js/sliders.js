@@ -99,6 +99,10 @@ var swiper8 = new Swiper(".swiper-mini", {
   loop: false,
   slideToClickedSlide: true,
   watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 var swiper7 = new Swiper(".swiper-photo", {
   loop: false,
